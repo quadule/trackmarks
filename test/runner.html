@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Trackmarks Tests</title>
+
+<link rel="stylesheet" type="text/css" href="jasmine-1.1.0/jasmine.css" />
+
+<script type="text/javascript" src="../trackmarks.js"></script>
+
+<script type="text/javascript" src="jasmine-1.1.0/jasmine.js"></script>
+<script type="text/javascript" src="jasmine-1.1.0/jasmine-html.js"></script>
+
+<script type="text/javascript" src="trackmarks_test.js"></script>
+
+<script type="text/javascript">
+  window.addEventListener("load", function() {
+    jasmine.getEnv().addReporter(new jasmine.TrivialReporter());
+    jasmine.getEnv().execute();
+  });
+</script>
+</head>
+<body>
+
+</body>
+</html>
