@@ -1,13 +1,18 @@
 window.Trackmarks = class Trackmarks
-  this.Service = {}
+  this.Detector = {}
   
-  constructor: (serviceNames) ->
-    @services = {}
+  constructor: (detectorNames) ->
+    @detectors = {}
     
-    if serviceNames == 'all'
-      @services[name] = new service for name, service of Trackmarks.Service
+    if detectorNames
+      @detectors[name] = new Trackmarks.Detector[name] for name in detectorNames
     else
-      @services[name] = new Trackmarks.Service[name] for name in serviceNames
+      @detectors[name] = new detector for name, detector of Trackmarks.Detector
   
-  detect: ->
-    name for name, service of @services when service.detect()
+  detectedServices: ->
+    serviceNames = []
+    
+    for key, detector of @detectors
+      serviceNames = serviceNames.concat detector.detectedServices()
+    
+    serviceNames

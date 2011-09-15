@@ -13,6 +13,6 @@ task :watch do
 end
 
 def compile(options='')
-  `coffee #{options} --join trackmarks.js --compile src/*.coffee src/services/*.coffee`
+  `coffee #{options} --join trackmarks.js --compile src/*.coffee src/detectors/*.coffee`
   `coffee #{options} --join test/trackmarks_test.js --compile test/*.coffee`
 end
