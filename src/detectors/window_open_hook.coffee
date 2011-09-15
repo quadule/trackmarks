@@ -13,10 +13,10 @@ class window.Trackmarks.Detector.WindowOpenHook
       @urls.push arguments[0]
     
   detectedServices: ->
-    serviceNames = []
+    services = {}
     
     for url in @urls
       for name, pattern of patterns
-        serviceNames.push(name) if url.match? pattern
+        services[name] = null if url.match? pattern
     
-    serviceNames
+    services
