@@ -1,8 +1,9 @@
 class window.Trackmarks.Detector.WindowOpenHook
   patterns =
+    "Delicious": /delicious\.com\/save\?/i
     "Facebook": /facebook\.com\/share/i
     "Tumblr": /tumblr\.com\/share/i
-    "Delicious": /delicious\.com\/save\?/i
+    "Wordpress": /(.*)\/wp-admin\/press-this\.php/i
   
   constructor: ->
     @urls = urls = []
@@ -17,6 +18,10 @@ class window.Trackmarks.Detector.WindowOpenHook
     
     for url in @urls
       for name, pattern of patterns
-        services[name] = null if url.match? pattern
+        if matches = url.match? pattern
+          if matches.length > 1
+            services[name] = url: matches[1]
+          else
+            services[name] = null
     
     services

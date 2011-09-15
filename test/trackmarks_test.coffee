@@ -38,9 +38,10 @@ describe "Trackmarks", ->
   
   describe "WindowOpenHook", ->
     services =
+      "Delicious": 'delicious.com/save?'
       "Facebook": 'facebook.com/share'
       "Tumblr": 'tumblr.com/share'
-      "Delicious": 'delicious.com/save?'
+      "Wordpress": 'blog.example.com/wp-admin/press-this.php'
     
     for service, url of services
       do (service, url) ->
