@@ -1,4 +1,4 @@
-window.Trackmarks = class Trackmarks
+class window.Trackmarks
   this.Detector = {}
   
   constructor: (detectorNames) ->

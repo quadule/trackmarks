@@ -1,8 +1,9 @@
-window.Trackmarks.Detector.ScriptTagMatcher = class ScriptTagMatcher
+class window.Trackmarks.Detector.ScriptTagMatcher
   patterns =
     "Instapaper": /instapaper\.com\//i
     "Read It Later": /readitlaterlist\.com\//i
     "Readability": /readability\.com\//i
+    "Twitter": /platform\.twitter\.com\/bookmarklets/i
     
   detectedServices: ->
     serviceNames = []
