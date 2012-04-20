@@ -1,4 +1,4 @@
-class window.Trackmarks.Detector.ScriptTagMatcher
+class Trackmarks.Detector.ScriptTagMatcher
   patterns =
     "Instapaper": /instapaper\.com\//i
     "Read It Later": /readitlaterlist\.com\//i

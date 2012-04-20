@@ -5,7 +5,7 @@ task :test => :build do
 end
 
 task :build do
-  compile
+  compile and uglify
 end
 
 task :watch do
@@ -13,6 +13,10 @@ task :watch do
 end
 
 def compile(options='')
-  `coffee #{options} --join trackmarks.js --compile src/*.coffee src/detectors/*.coffee`
-  `coffee #{options} --join test/trackmarks_test.js --compile test/*.coffee`
+  `coffee #{options} --join trackmarks.js --compile src/`
+  `coffee #{options} --join test/trackmarks_test.js --compile test/`
+end
+
+def uglify
+  `uglifyjs -o trackmarks.js < trackmarks.js`
 end

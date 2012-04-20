@@ -1,4 +1,4 @@
-class window.Trackmarks.Detector.WindowOpenHook
+class Trackmarks.Detector.WindowOpenHook
   patterns =
     "Delicious": /delicious\.com\/save\?/i
     "Facebook": /facebook\.com\/share/i
