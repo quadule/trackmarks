@@ -18,6 +18,7 @@ describe "Trackmarks", ->
   describe "ScriptTagMatcher", ->
     services =
       "Instapaper": 'fake://instapaper.com/'
+      "Pinterest": 'fake://assets.pinterest.com/js'
       "Read It Later": 'fake://readitlaterlist.com/'
       "Readability": 'fake://readability.com/'
       "Twitter": 'fake://platform.twitter.com/bookmarklets'

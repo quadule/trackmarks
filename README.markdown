@@ -7,6 +7,7 @@ Trackmarks is a Javascript library that tracks the bookmarklets run on a page. A
 * Delicious
 * Facebook
 * Instapaper
+* Pinterest
 * Read it Later
 * Readability
 * Tumblr
